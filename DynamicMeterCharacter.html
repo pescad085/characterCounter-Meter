@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic levels</title>
+    <style>
+        meter {
+            width: 150px;
+
+
+        }
+
+        /* style meter background */
+        meter::-webkit-meter-bar {
+            background: rgb(19, 152, 254);
+        }
+
+        /* style meter line that goes up */
+        meter::-webkit-meter-optimum-value {
+            background: rgb(191, 209, 55);
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <textarea id="textarea" cols="30" rows="10"></textarea>
+       
+    </form>
+    <meter id="myMeter" value="0" max="100"></meter>
+    <p id="here"></p>
+
+
+    <script>
+
+
+        //Text area length function  
+        function runCounter() {
+            let myTextArea = document.getElementById("textarea");
+            var length = myTextArea.value.length;
+
+
+        }
+        setInterval(runCounter, 100)
+
+
+
+
+
+        //Text area length and meter changer
+        let myValue = document.getElementById("myMeter");
+        var value = 0.0;
+        function increase() {
+            let myTextArea = document.getElementById("textarea");
+            var length = myTextArea.value.length;
+            value = length
+            myValue.setAttribute("value", value);
+            document.getElementById("here").innerHTML = myValue.value;
+
+
+
+        }
+        setInterval(increase, 100)
+        myValue.addEventListener("input", increas)
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
