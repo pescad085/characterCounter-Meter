@@ -37,22 +37,9 @@
     <script>
 
 
-        //Text area length function  
-        function runCounter() {
-            let myTextArea = document.getElementById("textarea");
-            var length = myTextArea.value.length;
-
-
-        }
-        setInterval(runCounter, 100)
-
-
-
-
-
-        //Text area length and meter changer
+    
         let myValue = document.getElementById("myMeter");
-        var value = 0.0;
+    
         function increase() {
             let myTextArea = document.getElementById("textarea");
             var length = myTextArea.value.length;
@@ -64,7 +51,7 @@
 
         }
         setInterval(increase, 100)
-        myValue.addEventListener("input", increas)
+       
 
 
 
